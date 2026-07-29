@@ -12,3 +12,5 @@
 
 - 対象を絞るためにここではTagを指定
 ![](https://github.com/mzthr78/UnityWorldSpaceButton/blob/master/image/Screenshot2026-07-29%2023.44.00.png)
+
+あとはソースを見てね。MainCamera.cs と button.cs を見ればわかると思う。
