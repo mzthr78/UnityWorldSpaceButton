@@ -25,6 +25,8 @@ public class MainCamera : MonoBehaviour
 
     [SerializeField] private EventSystem eventSystem;
 
+    [SerializeField] private GraphicRaycaster canvasRaycaster;
+
     void Update()
     {
         //Ray ray = cam.ScreenPointToRay(Input.mousePosition);
@@ -36,14 +38,21 @@ public class MainCamera : MonoBehaviour
 
         List<RaycastResult> results = new List<RaycastResult>();
 
+        /*
         eventSystem.RaycastAll(ped, results);
 
-        Debug.Log("B");
         foreach (RaycastResult result in results)
         {
-            Debug.Log("[B]name? " + result.gameObject.name);
+            if (result.gameObject.tag == "Hoge")
+            {
+                if (Input.GetMouseButtonDown(0))
+                {
+                }
+            }
         }
+        */
 
+        canvasRaycaster.Raycast(ped, results);
         foreach (RaycastResult result in results)
         {
             if (result.gameObject.tag == "Hoge")
@@ -55,5 +64,6 @@ public class MainCamera : MonoBehaviour
                 }
             }
         }
+
     }
 }
