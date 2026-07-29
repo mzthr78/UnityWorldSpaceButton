@@ -28,15 +28,21 @@ public class MainCamera : MonoBehaviour
     void Update()
     {
         //Ray ray = cam.ScreenPointToRay(Input.mousePosition);
-        Ray ray = new Ray(transform.position, transform.forward);
-
-        Debug.DrawRay(ray.origin, ray.direction * distance, Color.blue);
+        //Ray ray = new Ray(transform.position, transform.forward);
+        //Debug.DrawRay(ray.origin, ray.direction * distance, Color.blue);
 
         PointerEventData ped = new PointerEventData(eventSystem);
         ped.position = new Vector2(Screen.width / 2f, Screen.height / 2f);
 
         List<RaycastResult> results = new List<RaycastResult>();
+
         eventSystem.RaycastAll(ped, results);
+
+        Debug.Log("B");
+        foreach (RaycastResult result in results)
+        {
+            Debug.Log("[B]name? " + result.gameObject.name);
+        }
 
         foreach (RaycastResult result in results)
         {
