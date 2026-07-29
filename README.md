@@ -2,6 +2,9 @@
 
 正しいかどうかはわからん。雰囲気でやってる。
 
+雑な説明だけどゆるして
+
+
 - Canvas の Event Camera を指定
 - Canvas に Graphic Raycaster を追加
 ![](https://github.com/mzthr78/UnityWorldSpaceButton/blob/master/image/Screenshot2026-07-29%2023.43.09.png)
