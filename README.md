@@ -1,8 +1,9 @@
 # UnityWorldSpaceButton
 
 正しいかどうかはわからん。雰囲気でやってる。
+  
 
-雑な説明だけどゆるして
+以下、雑な説明だけどゆるして
 
 
 - Canvas の Event Camera を指定
