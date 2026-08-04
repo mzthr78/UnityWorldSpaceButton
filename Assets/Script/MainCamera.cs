@@ -29,6 +29,7 @@ public class MainCamera : MonoBehaviour
 
     void Update()
     {
+        /*
         //Ray ray = cam.ScreenPointToRay(Input.mousePosition);
         Ray ray = new Ray(transform.position, transform.forward);
         RaycastHit hit;
@@ -45,7 +46,7 @@ public class MainCamera : MonoBehaviour
                 Debug.Log("n?" + hit.collider.gameObject.name);
             }
         }
-        
+        */
 
         PointerEventData ped = new PointerEventData(eventSystem);
         ped.position = new Vector2(Screen.width / 2f, Screen.height / 2f);
