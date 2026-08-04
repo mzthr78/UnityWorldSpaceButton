@@ -15,4 +15,5 @@
 
 あとはソースを見てね。MainCamera.cs と button.cs を見ればわかると思う。
 
-でも正直World SpaceじゃなくてScreen Spaceにしたほうがゲーム上も使いやすいと思う。
+~~でも正直World SpaceじゃなくてScreen Spaceにしたほうがゲーム上も使いやすいと思う。~~
+World Spaceでもカメラの切り替えでいけるらしい。
