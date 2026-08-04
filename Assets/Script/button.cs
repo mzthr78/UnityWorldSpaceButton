@@ -8,13 +8,17 @@ public class button : MonoBehaviour
 
     private int activeIndex = 0;
 
+    [SerializeField] private int bIdx = 0;
+
     public void OnClick()
     {
+        /*
         activeIndex++;
         if (activeIndex > cameras.Length - 1)
         {
             activeIndex = 0;
         }
+        */
 
         for (int i = 0; i < cameras.Length; i++)
         {
@@ -22,7 +26,12 @@ public class button : MonoBehaviour
             cameras[i].targetTexture = null;
         }
 
+        /*
         cameras[activeIndex].gameObject.SetActive(true);
         cameras[activeIndex].targetTexture = renderTexture;
+        */
+        
+        cameras[bIdx].gameObject.SetActive(true);
+        cameras[bIdx].targetTexture = renderTexture;
     }
 }

@@ -30,8 +30,22 @@ public class MainCamera : MonoBehaviour
     void Update()
     {
         //Ray ray = cam.ScreenPointToRay(Input.mousePosition);
-        //Ray ray = new Ray(transform.position, transform.forward);
-        //Debug.DrawRay(ray.origin, ray.direction * distance, Color.blue);
+        Ray ray = new Ray(transform.position, transform.forward);
+        RaycastHit hit;
+
+        Debug.DrawRay(ray.origin, ray.direction * distance, Color.blue);
+
+        if (EventSystem.current.IsPointerOverGameObject())
+        {
+        } else
+        {
+            // これは無理
+            if (Physics.Raycast(ray, out hit, distance, mask))
+            {
+                Debug.Log("n?" + hit.collider.gameObject.name);
+            }
+        }
+        
 
         PointerEventData ped = new PointerEventData(eventSystem);
         ped.position = new Vector2(Screen.width / 2f, Screen.height / 2f);
